@@ -9,7 +9,16 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'translate(0,0)'  },
+          '50%': { transform: 'translate(0%,10%)' },
+          // '0%,100%': {transform: 'rotate(3deg)'  },
+          // '50%': {transform: 'rotate(-3deg)'  },
+        }
+      }
+    },
   },
   plugins: [],
 }
