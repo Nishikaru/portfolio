@@ -61,7 +61,7 @@ const Tech = () => {
   }, [targetRef]);
 
   return (
-    <div id='tech' className='px-[13%] mb-10 h-auto flex flex-col items-center md:items-start gap-12'>
+    <div id='tech' className='px-[13%] py-20 mb-10 h-auto flex flex-col items-center md:items-start gap-12'>
       <h1  className='text-xl md:text-3xl lg:text-4xl font-semibold'>
       Technologies
       </h1>

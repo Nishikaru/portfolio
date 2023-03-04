@@ -47,16 +47,16 @@ const AboutMe = () => {
         {/* used ref here */}
         <div ref={targetRef}  className='flex flex-col lg:flex-row h-full lg:h-fit w-fit lg:w-full justify-between gap-10 text-justify'>
           <div className={`transition-all ease-in-out duration-300 flex lg:flex-col gap-6 items-center justify-center w-full ${isVisible?'':' translate-x-[2000px] '}`}>
-          <h1 className='text-xl font-medium'>2020</h1>
-          <p className='w-[80%] '> Started learning web development. Also started studying CSE in BUBT. </p>
+          <h1 className='text-lg md:text-xl font-medium'>2020</h1>
+          <p className='w-[80%] text-sm sm:text-base'> Started learning web development. Also started studying CSE in BUBT. </p>
           </div>
           <div className={`transition-all ease-in-out duration-500 flex lg:flex-col gap-6 items-center justify-center w-full ${isVisible?'':' translate-x-[2000px] '}`}>
-          <h1 className='text-xl font-medium'>2021</h1>
-          <p className='w-[80%] '> Developing skills in javascript. also started web development course in programming hero.  </p>
+          <h1 className='text-lg md:text-xl font-medium'>2021</h1>
+          <p className='w-[80%] text-sm sm:text-base'> Developing skills in javascript. also started web development course in programming hero.  </p>
           </div>
           <div className={`transition-all ease-in-out duration-700 flex lg:flex-col gap-6 items-center justify-center w-full ${isVisible?'':' translate-x-[2000px] '}`}>
-          <h1 className='text-xl font-medium'>2022</h1>
-          <p className='w-[80%] '> learned react.js completed programming hero course learned next.js and typescript and did some real life projects. </p>
+          <h1 className='text-lg md:text-xl font-medium'>2022</h1>
+          <p className='w-[80%] text-sm sm:text-base'> learned react.js completed programming hero course learned next.js and typescript and did some real life projects. </p>
           </div>
         </div>
       </div>
