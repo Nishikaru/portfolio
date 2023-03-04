@@ -32,7 +32,7 @@ const AboutMe = () => {
   }, [targetRef]);
 
   return (
-    <div  id='about' className='px-[13%] mb-10 h-[50vh] flex flex-col items-center md:items-start gap-12'>
+    <div  id='about' className='px-[13%] my-10 h-[80vh] lg:h-[50vh] flex flex-col items-center md:items-start md:justify-center gap-12'>
       <h1  className='text-xl md:text-3xl lg:text-4xl font-semibold'>
         About Me
       </h1>
