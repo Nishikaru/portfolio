@@ -8,10 +8,10 @@ const HeroSec = () => {
       <div className='flex flex-col gap-6 lg:w-[60%] items-center md:items-start'>
         <h1 className='text-xl md:text-3xl lg:text-4xl font-semibold w-[70%] text-center md:text-left'>Crafting Memorable Front-End Experiences</h1>
         <p className='w-[80%] font-medium text-center md:text-left'>
-          I design and build visually appealing and intuitive interfaces that deliver seamless user experiences. Explore my portfolio to see examples of my work and let's discuss how I can help bring your digital vision to life.
+          I design and build visually appealing and intuitive interfaces that deliver seamless user experiences. Explore my portfolio to see examples of my work and lets discuss how I can help bring your digital vision to life.
         </p>
         <div>
-          <button className='uppercase font-semibold bg-gradient-to-l  transition-all from-[#13ADC7] hover:to-[#945DD6] p-4 rounded-md'>hire me</button>
+          <button className='uppercase font-semibold bg-gradient-to-l from-[#13ADC7] hover:to-[#945DD6] p-4 rounded-md'>hire me</button>
         </div>
       </div>
       <div className='lg:w-[40%] flex flex-row-reverse justify-center md:justify-start wiggle animate-[wiggle_2s_ease-in-out_infinite]'>

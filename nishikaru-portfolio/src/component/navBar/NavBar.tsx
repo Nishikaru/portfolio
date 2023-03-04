@@ -6,7 +6,7 @@ import NavLinks from './NavLinks';
 const NavBar = () => {
 		const [toggler,setToggler] = useState(false)
   return (
-    <nav className='w-screen flex justify-between items-center px-[10%] py-6 md:py-3 bg-[#0F1624] text-[#ffffff] fixed top-0 left-0'>
+    <nav className='z-50 w-screen flex justify-between items-center px-[10%] py-6 md:py-3 bg-[#0F1624] text-[#ffffff] fixed top-0 left-0'>
     	<div>
 				<h1 className='uppercase font-bold text-2xl'>sajed</h1>
     	</div>

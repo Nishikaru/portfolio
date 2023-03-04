@@ -16,6 +16,13 @@ module.exports = {
           '50%': { transform: 'translate(0%,10%)' },
           // '0%,100%': {transform: 'rotate(3deg)'  },
           // '50%': {transform: 'rotate(-3deg)'  },
+        },
+        sliding:{
+          '0%,100%' : { left:'0%', width:'0%'},
+          '25%': { left:'0%', width:'100%'},
+          '26%': { left:'auto',right:'0%', width:'100%'},
+          '50%': { left:'auto',right:'0%', width:'0%'},
+          // '75%': { left:'0%', width:'100%'}
         }
       }
     },
