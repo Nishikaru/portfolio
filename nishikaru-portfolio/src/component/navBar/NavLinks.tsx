@@ -1,8 +1,13 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { FC } from 'react';
 import {GiCrossedBones} from 'react-icons/gi'
 
-const NavLinks = ({toggler,setToggler}:any) => {
+type NavLinksProps ={
+  toggler:boolean;
+  setToggler:Function;
+}
+
+const NavLinks: FC<NavLinksProps> = ({toggler,setToggler}) => {
   const toggleHandler =()=>{
     setToggler(!toggler)
   }
@@ -13,8 +18,8 @@ const NavLinks = ({toggler,setToggler}:any) => {
       </span>
 				<div className='flex flex-col md:flex-row gap-12'>
         <Link onClick={toggleHandler} href={'#projects'}>Projects</Link>
-				<Link onClick={toggleHandler} href={'#'}>Technologies</Link>
-				<Link onClick={toggleHandler} href={'#'}>About me</Link>
+				<Link onClick={toggleHandler} href={'#tech'}>Technologies</Link>
+				<Link onClick={toggleHandler} href={'#about'}>About me</Link>
         </div>
         {/* <div className='md:hidden'></div> */}
 			</div>

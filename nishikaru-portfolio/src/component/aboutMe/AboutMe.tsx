@@ -1,28 +1,63 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const AboutMe = () => {
+  // State variable to track the visibility status of the target element
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Ref object to attach to the target element
+  const targetRef = useRef(null);
+
+  useEffect(() => {
+    // Create a new IntersectionObserver instance with a callback function
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Set the visibility status based on the intersection ratio
+        setIsVisible(entry.isIntersecting);
+      },
+      // Optional options object for the observer
+      { rootMargin: '0px', threshold: 1.0 }
+    );
+
+    // Attach the ref to the target element using the observer
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    // Cleanup function to unobserve the target element when unmounting
+    return () => {
+      if (targetRef.current) {
+        observer.unobserve(targetRef.current);
+      }
+    };
+  }, [targetRef]);
+
   return (
-    <div className='px-[13%] mb-20 h-[80vh] flex flex-col items-center md:items-start gap-12'>
-      <h1 className='text-xl md:text-3xl lg:text-4xl font-semibold'>
+    <div  id='about' className='px-[13%] mb-10 h-[50vh] flex flex-col items-center md:items-start gap-12'>
+      <h1  className='text-xl md:text-3xl lg:text-4xl font-semibold'>
         About Me
       </h1>
-      <div className='w-full h-full flex items-center lg:flex-col justify-between lg:justify-evenly gap-6'>
+      <div  className='w-full h-full lg:h-auto flex items-center lg:flex-col justify-between lg:justify-center gap-6'>
       
-        <div className='h-[80%] lg:h-2 w-2 lg:w-[80%] rounded-md bg-[#ffffff] relative'>
+        <div className='h-[80%] lg:h-2 w-2 lg:w-[80%] rounded-md bg-[#ffffff] relative '>
           <div className='absolute bg-gradient-to-l from-[#13ADC7] to-[#945DD6] lg:h-2 lg:sliding lg:animate-[sliding_5s_ease-in-out_infinite]'></div>
-          <div className='h-5 w-5 rounded-full bg-[#ffffff] absolute translate-x-[-50%] translate-y-[-50%] top-[0%] left-[50%] lg:top-[50%] lg:left-[0%]'></div>
-          <div className='h-5 w-5 rounded-full bg-[#ffffff] absolute translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%] lg:top-[50%] lg:left-[50%]'></div>
-          <div className='h-5 w-5 rounded-full bg-[#ffffff] absolute translate-x-[-50%] translate-y-[-50%] top-[100%] left-[50%] lg:top-[50%] lg:left-[100%]'></div>
+          <div className='h-5 w-5 rounded-full bg-[#945DD6] absolute translate-x-[-50%] translate-y-[-50%] top-[0%] left-[50%] lg:top-[50%] lg:left-[0%]'></div>
+          <div className='h-5 w-5 rounded-full bg-[#6978D1] absolute translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%] lg:top-[50%] lg:left-[50%]'></div>
+          <div className='h-5 w-5 rounded-full bg-[#13ADC7] absolute translate-x-[-50%] translate-y-[-50%] top-[100%] left-[50%] lg:top-[50%] lg:left-[100%]'></div>
         </div>
-        <div className='flex flex-col lg:flex-row  w-fit lg:w-full h-full lg:h-fit justify-around gap-10 text-justify font-semibold'>
-        <h1>2020</h1>
-        <h1>2021</h1>
-        <h1>2022</h1>
-      </div>
-        <div className='flex flex-col lg:flex-row h-full lg:h-fit w-fit lg:w-full justify-between gap-10 text-justify '>
-          <p className='w-[80%] lg:w-[30%]'> Started learning web development. Also started studying CSE in BUBT. </p>
-          <p className='w-[80%] lg:w-[30%]'> Developing skills in javascript. also started web development course in programming hero.  </p>
-          <p className='w-[80%] lg:w-[30%]'> learned react.js completed programming hero course learned next.js and typescript and did some real life projects. </p>
+        {/* used ref here */}
+        <div ref={targetRef}  className='flex flex-col lg:flex-row h-full lg:h-fit w-fit lg:w-full justify-between gap-10 text-justify'>
+          <div className={`transition-all ease-in-out duration-300 flex lg:flex-col gap-6 items-center justify-center w-full ${isVisible?'':' translate-x-[2000px] '}`}>
+          <h1 className='text-xl font-medium'>2020</h1>
+          <p className='w-[80%] '> Started learning web development. Also started studying CSE in BUBT. </p>
+          </div>
+          <div className={`transition-all ease-in-out duration-500 flex lg:flex-col gap-6 items-center justify-center w-full ${isVisible?'':' translate-x-[2000px] '}`}>
+          <h1 className='text-xl font-medium'>2021</h1>
+          <p className='w-[80%] '> Developing skills in javascript. also started web development course in programming hero.  </p>
+          </div>
+          <div className={`transition-all ease-in-out duration-700 flex lg:flex-col gap-6 items-center justify-center w-full ${isVisible?'':' translate-x-[2000px] '}`}>
+          <h1 className='text-xl font-medium'>2022</h1>
+          <p className='w-[80%] '> learned react.js completed programming hero course learned next.js and typescript and did some real life projects. </p>
+          </div>
         </div>
       </div>
     </div>

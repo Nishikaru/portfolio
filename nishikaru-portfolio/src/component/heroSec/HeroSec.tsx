@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import heroImg from './../../../public/imgs/drawing.png'
+// const message = " Crafting Memorable Front-End Experiences";
 
 const HeroSec = () => {
   return (
