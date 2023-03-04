@@ -45,18 +45,18 @@ const AboutMe = () => {
           <div className='h-5 w-5 rounded-full bg-[#13ADC7] absolute translate-x-[-50%] translate-y-[-50%] top-[100%] left-[50%] lg:top-[50%] lg:left-[100%]'></div>
         </div>
         {/* used ref here */}
-        <div ref={targetRef}  className='flex flex-col lg:flex-row h-full lg:h-fit w-fit lg:w-full justify-between gap-10 text-justify'>
-          <div className={`transition-all ease-in-out duration-300 flex lg:flex-col gap-6 items-center justify-center w-full ${isVisible?'':' translate-x-[2000px] '}`}>
+        <div ref={targetRef}  className='flex flex-col lg:flex-row  h-[70vh] lg:h-fit w-fit lg:w-full justify-between gap-10 text-center lg:text-justify overflow-y-auto overflow-x-hidden'>
+          <div className={`transition-all ease-in-out duration-300 flex flex-col gap-3 lg:gap-6 items-center justify-center w-full ${isVisible?'':' translate-x-[2000px] '}`}>
           <h1 className='text-lg md:text-xl font-medium'>2020</h1>
-          <p className='w-[80%] text-sm sm:text-base'> Started learning web development. Also started studying CSE in BUBT. </p>
+          <p className='w-[80%] '> Started learning web development. Also started studying CSE in BUBT. </p>
           </div>
-          <div className={`transition-all ease-in-out duration-500 flex lg:flex-col gap-6 items-center justify-center w-full ${isVisible?'':' translate-x-[2000px] '}`}>
+          <div className={`transition-all ease-in-out duration-500 flex flex-col gap-3 lg:gap-6 items-center justify-center w-full ${isVisible?'':' translate-x-[2000px] '}`}>
           <h1 className='text-lg md:text-xl font-medium'>2021</h1>
-          <p className='w-[80%] text-sm sm:text-base'> Developing skills in javascript. also started web development course in programming hero.  </p>
+          <p className='w-[80%] '> Developing skills in javascript. also started web development course in programming hero.  </p>
           </div>
-          <div className={`transition-all ease-in-out duration-700 flex lg:flex-col gap-6 items-center justify-center w-full ${isVisible?'':' translate-x-[2000px] '}`}>
+          <div className={`transition-all ease-in-out duration-700 flex flex-col gap-3 lg:gap-6 items-center justify-center w-full ${isVisible?'':' translate-x-[2000px] '}`}>
           <h1 className='text-lg md:text-xl font-medium'>2022</h1>
-          <p className='w-[80%] text-sm sm:text-base'> learned react.js completed programming hero course learned next.js and typescript and did some real life projects. </p>
+          <p className='w-[80%] '> learned react.js completed programming hero course learned next.js and typescript and did some real life projects. </p>
           </div>
         </div>
       </div>
