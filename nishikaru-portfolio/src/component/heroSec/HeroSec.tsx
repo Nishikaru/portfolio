@@ -17,7 +17,7 @@ const HeroSec = () => {
       </div>
       <div className='lg:w-[40%] flex flex-row-reverse justify-center md:justify-start wiggle animate-[wiggle_2s_ease-in-out_infinite]'>
         <Image
-        className='w-[80%] lg:w-full h-auto'
+        className='w-full h-auto'
         src={heroImg}
         alt={''}
         width={800}
